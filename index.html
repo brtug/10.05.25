@@ -17,12 +17,16 @@
     justify-content: center;
     height: 100vh;
     cursor: pointer;
+    position: relative;
   }
+
   #start {
     font-size: 2.5rem;
     margin-bottom: 20px;
     animation: blink 1s infinite;
+    z-index: 2;
   }
+
   @keyframes blink {
     0%, 100% {opacity: 1;}
     50% {opacity: 0.5;}
@@ -36,12 +40,13 @@
     border-bottom: 2px solid white;
     padding: 10px 0;
     box-sizing: border-box;
+    z-index: 2;
   }
 
   .marquee {
     display: inline-block;
     padding-left: 100%;
-    animation: marqueeAnim 200s linear infinite; /* Süre 200 saniye */
+    animation: marqueeAnim 200s linear infinite;
     font-size: 1.5rem;
   }
 
@@ -54,6 +59,26 @@
     }
   }
 
+  .orchid {
+    position: absolute;
+    bottom: 10px;
+    width: 64px;
+    height: 64px;
+    z-index: 1;
+  }
+
+  .note {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: #5ac4ff;
+    margin-top: 5px;
+    z-index: 1;
+    font-style: italic;
+  }
+
   @media (max-width: 600px) {
     #start {
       font-size: 1.8rem;
@@ -61,6 +86,10 @@
     }
     .marquee {
       font-size: 1.2rem;
+    }
+    .orchid {
+      width: 48px;
+      height: 48px;
     }
   }
 </style>
@@ -71,6 +100,9 @@
   <div class="marquee-container" style="display:none;">
     <div class="marquee" id="marquee"></div>
   </div>
+
+  <img src="https://minecraft.wiki/images/Blue_Orchid_JE7_BE2.png?f8a0f" alt="Blue Orchid" class="orchid" />
+  <div class="note">Buda sana </div>
 
 <script>
 const expressions = [
