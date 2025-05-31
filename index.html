@@ -55,12 +55,16 @@
 <button id="btn">Tıkla</button>
 <div id="message"></div>
 
+<audio id="softMusic" src="https://cdn.pixabay.com/download/audio/2022/03/20/audio_4d3c48868d.mp3?filename=soft-piano-12274.mp3"></audio>
+
 <script>
   const btn = document.getElementById('btn');
   const messageDiv = document.getElementById('message');
+  const audio = document.getElementById('softMusic');
 
   btn.addEventListener('click', () => {
     messageDiv.textContent = "3. ayımız kutlu olsun seni çok seviyorum";
+    audio.play();
   });
 </script>
 
