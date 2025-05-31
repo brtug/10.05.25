@@ -2,148 +2,67 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BALIMMM</title>
+<title>Neon Sevgi Mesajı</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
 <style>
   body {
     margin: 0;
-    background: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
+    background-color: #000; /* tam siyah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+  }
+
+  button {
+    padding: 12px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    background: #ff33cc;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
     cursor: pointer;
-    position: relative;
+    box-shadow:
+      0 0 8px #ff33cc,
+      0 0 20px #ff33cc;
+    transition: box-shadow 0.3s ease;
+  }
+  button:hover {
+    box-shadow:
+      0 0 15px #ff33cc,
+      0 0 30px #ff33cc;
   }
 
-  #start {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    animation: blink 1s infinite;
-    z-index: 2;
-  }
-
-  @keyframes blink {
-    0%, 100% {opacity: 1;}
-    50% {opacity: 0.5;}
-  }
-
-  .marquee-container {
-    width: 100vw;
-    overflow: hidden;
-    white-space: nowrap;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    padding: 10px 0;
-    box-sizing: border-box;
-    z-index: 2;
-  }
-
-  .marquee {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marqueeAnim 200s linear infinite;
-    font-size: 1.5rem;
-  }
-
-  @keyframes marqueeAnim {
-    from {
-      transform: translateX(0%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-
-  .orchid {
-    position: absolute;
-    bottom: 10px;
-    width: 64px;
-    height: 64px;
-    z-index: 1;
-  }
-
-  .note {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.9rem;
-    color: #5ac4ff;
-    margin-top: 5px;
-    z-index: 1;
-    font-style: italic;
-  }
-
-  @media (max-width: 600px) {
-    #start {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-    }
-    .marquee {
-      font-size: 1.2rem;
-    }
-    .orchid {
-      width: 48px;
-      height: 48px;
-    }
+  #message {
+    margin-top: 30px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #ff33cc;
+    text-shadow:
+      0 0 5px #ff33cc,
+      0 0 10px #ff33cc,
+      0 0 20px #ff33cc,
+      0 0 30px #ff33cc,
+      0 0 40px #ff33cc;
   }
 </style>
 </head>
 <body>
-  <div id="start">Tıkla</div>
 
-  <div class="marquee-container" style="display:none;">
-    <div class="marquee" id="marquee"></div>
-  </div>
-
-  <img src="https://minecraft.wiki/images/Blue_Orchid_JE7_BE2.png?f8a0f" alt="Blue Orchid" class="orchid" />
-  <div class="note">Buda sana </div>
+<button id="btn">Tıkla</button>
+<div id="message"></div>
 
 <script>
-const expressions = [
-  "Türkçe: Seni seviyorum",
-  "İngilizce: I love you",
-  "Fransızca: Je t’aime",
-  "İspanyolca: Te amo",
-  "Almanca: Ich liebe dich",
-  "İtalyanca: Ti amo",
-  "Portekizce: Amo-te",
-  "Yunanca: S'agapo",
-  "Rusça: Ya tebya lyublyu",
-  "Japonca: 愛してる (Aishiteru)",
-  "Çince: 我爱你 (Wǒ ài nǐ)",
-  "Korece: 사랑해요 (Saranghaeyo)",
-  "Hintçe: मैं तुमसे प्यार करता हूँ",
-  "Farsça: دوستت دارم",
-  "Vietnamca: Tôi yêu bạn",
-  "İbranice: Ani ohev otach",
-  "Macarca: Szeretlek",
-  "Lehçe: Kocham cię",
-  "Endonezyaca: Aku cinta kamu",
-  "Svahili: Nakupenda",
-  "Zulu: Ngiyakuthanda",
-  "Tagalog: Mahal kita",
-  "İzlandaca: Ég elska þig",
-  "Esperanto: Mi amas vin",
-  "Baskça: Maite zaitut"
-];
+  const btn = document.getElementById('btn');
+  const messageDiv = document.getElementById('message');
 
-const start = document.getElementById('start');
-const marqueeContainer = document.querySelector('.marquee-container');
-const marquee = document.getElementById('marquee');
-
-start.addEventListener('click', () => {
-  start.style.display = 'none';
-  marqueeContainer.style.display = 'block';
-
-  const repeatedTexts = expressions.join(" • ") + " • ";
-  marquee.textContent = repeatedTexts.repeat(10);
-});
+  btn.addEventListener('click', () => {
+    messageDiv.textContent = "3. ayımız kutlu olsun seni çok seviyorum";
+  });
 </script>
+
 </body>
 </html>
