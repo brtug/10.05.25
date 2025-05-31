@@ -2,18 +2,22 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Seni Seviyorum</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
 <style>
   body {
     margin: 0;
     height: 100vh;
-    background-color: #000; /* tam siyah */
+    background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
     flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
   }
 
   button {
@@ -29,6 +33,8 @@
       0 0 8px #ff33cc,
       0 0 20px #ff33cc;
     transition: box-shadow 0.3s ease;
+    max-width: 100%;
+    word-wrap: break-word;
   }
   button:hover {
     box-shadow:
@@ -47,6 +53,31 @@
       0 0 20px #ff33cc,
       0 0 30px #ff33cc,
       0 0 40px #ff33cc;
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+
+  /* Responsive için */
+  @media (max-width: 480px) {
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+    #message {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    button {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+    #message {
+      font-size: 20px;
+      margin-top: 15px;
+    }
   }
 </style>
 </head>
@@ -61,7 +92,7 @@
 
   btn.addEventListener('click', () => {
     messageDiv.textContent = "3. haftamız kutlu olsun";
-    btn.style.display = 'none'; // Butonu gizle
+    btn.style.display = 'none';
   });
 </script>
 
