@@ -1,100 +1,27 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Seni Seviyorum</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
-<style>
-  body {
-    margin: 0;
-    height: 100vh;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-    flex-direction: column;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-  }
-
-  button {
-    padding: 12px 30px;
-    font-size: 20px;
-    font-weight: 600;
-    background: #ff33cc;
-    border: none;
-    border-radius: 8px;
-    color: #fff;
-    cursor: pointer;
-    box-shadow:
-      0 0 8px #ff33cc,
-      0 0 20px #ff33cc;
-    transition: box-shadow 0.3s ease;
-    max-width: 100%;
-    word-wrap: break-word;
-  }
-  button:hover {
-    box-shadow:
-      0 0 15px #ff33cc,
-      0 0 30px #ff33cc;
-  }
-
-  #message {
-    margin-top: 30px;
-    font-size: 32px;
-    font-weight: 600;
-    color: #ff33cc;
-    text-shadow:
-      0 0 5px #ff33cc,
-      0 0 10px #ff33cc,
-      0 0 20px #ff33cc,
-      0 0 30px #ff33cc,
-      0 0 40px #ff33cc;
-    word-wrap: break-word;
-    max-width: 100%;
-  }
-
-  /* Responsive için */
-  @media (max-width: 480px) {
-    button {
-      font-size: 18px;
-      padding: 10px 20px;
-    }
-    #message {
-      font-size: 24px;
-      margin-top: 20px;
-    }
-  }
-
-  @media (max-width: 360px) {
-    button {
-      font-size: 16px;
-      padding: 8px 16px;
-    }
-    #message {
-      font-size: 20px;
-      margin-top: 15px;
-    }
-  }
-</style>
+    <meta charset="UTF-8">
+    <title>SENI COK OZLEDIM</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        .kutucuk {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
+    <div class="kutucuk">
+        <h1></h1>
+        <p>Bilmiyorum bunu goruyor musun ancak seni cok ama cok ozledim gercekten kaybedince anlarsin degerini inanmiyodum ama simdi daha iyi anliyorum sensizlik beni mahfediyor cunku ben ilk defa boyle hissetmistim sen bi keresinde beni yari yolda birakma demistin ama birakan sen oldun bence bi daha deneyelim sana anlattiklarimi kimseye anlatmadim sen ayrisin herkesten seni cok ozluyorum geceleri aglamadigi dusunuyorsan yaniliyosun lutfen geri whatsapptan yaz </p>
 
-<button id="btn">Tıkla</button>
-<div id="message"></div>
-
-<script>
-  const btn = document.getElementById('btn');
-  const messageDiv = document.getElementById('message');
-
-  btn.addEventListener('click', () => {
-    messageDiv.textContent = "3. haftamız kutlu olsun";
-    btn.style.display = 'none';
-  });
-</script>
-
+    </div>
 </body>
 </html>
